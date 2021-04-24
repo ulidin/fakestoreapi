@@ -1,5 +1,7 @@
-WEBB20 – Backend 2 PHP – Inlämningsuppgift 1 (OBS! Enbart G-nivå)
-- Arbeta med FakeStoreAPI https://fakestoreapi.com/
+# WEBB20 – Backend 2 PHP – Inlämningsuppgift 1 (OBS! Enbart G-nivå)
+
+
+- Arbeta med **FakeStoreAPI** https://fakestoreapi.com/
   Använd följande resurs/endpoint https://fakestoreapi.com/products
   Alternativ endpoint om FakeStoreAPI är nere http://webacademy.se/fakestore/
 - Skapa en responsiv webbsida som presenterar ett antal produkter i en valfri layout.
