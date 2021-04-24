@@ -24,4 +24,6 @@
 - Spara filen som PDF enligt följande namnkonvention
   WEBB20-Backend-2-PHP-Uppgift-01-DITT-NAMN.pdf
 - Inlämningsuppgiften ska lämnas in via studentportalen (ej e-post).
-- **`Deadline torsdag 2021-04-28 kl. 16.00.`**
+```sh
+Deadline torsdag 2021-04-28 kl. 16.00.
+```
