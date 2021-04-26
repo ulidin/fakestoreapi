@@ -20,8 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Women's clothing</h5>
                         <img src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
-                        <p class="card-text">Fashion for women.</p>
-                        <a href="cloths.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="clothes.php?category=women clothing" class="btn btn-primary">Fashion for women</a>
                     </div>
                 </div>
             </div>
@@ -30,8 +29,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Men's clothing</h5>
                         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
-                        <p class="card-text">Fashion for men.</p>
-                        <a href="cloths.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="clothes.php?category=men clothing" class="btn btn-primary">Fashion for men</a>
                     </div>
                 </div>
             </div>
@@ -40,13 +38,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Jewelery</h5>
                         <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
-                        <p class="card-text">Fashion of jewelery..</p>
-                        <a href="cloths.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="clothes.php?category=jewelery" class="btn btn-primary">Fashion of jewelery</a>
+
                     </div>
                 </div>
             </div>
         </div>
-        <?php App::main() ?>
 </body>
 
 </html>

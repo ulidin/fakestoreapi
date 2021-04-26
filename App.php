@@ -4,7 +4,8 @@ class App
 {
 
 
-    public static $endpoint = 'https://fakestoreapi.com/products';
+    // public static $endpoint = 'https://fakestoreapi.com/products';
+    public static $endpoint = 'http://webacademy.se/fakestore/';
 
 
     /*****
@@ -33,29 +34,6 @@ class App
     }
 
 
-    /*****
-     * En klassmetod som renderar data
-     */
-    public static function renderData($array)
-    {
-        $table = "<table class='table'>
-        <tr>
-            <th>store category</th>
-        </tr>";
-        foreach ($array as $store) {
-            if ($store['category'] == "men's clothing") {
-
-                $table .= "<tr>
-                <td> $store[image] </td>
-                </tr>";
-            }
-        }
-        $table .= '</table>';
-        echo $table;
-    }
-
-    //---------------
-
     public static function getDataImages($url)
     {
         $json = @file_get_contents($url);
@@ -63,27 +41,35 @@ class App
             throw new Exception('Could not access ' . $url);
         }
         $imgArray = json_decode($json, true);
-        self::renderImages($imgArray);
+        self::renderData($imgArray);
     }
 
-    public static function renderImages($array)
-    {
 
+
+    /*****
+     * En klassmetod som renderar data
+     */
+    public static function renderData($array)
+    {
+        $getCategory = strtolower(isset($_GET['category'])) ? $_GET['category'] : null;
+        iconv(mb_detect_encoding($getCategory, mb_detect_order(), true), "UTF-8", $getCategory);
         $cards = "";
-        foreach ($array as $image) {
-            $cards .= "
-            <div class='card m-1' style='width: 18rem' style='height: 6rem'>
+        foreach ($array as $arrayKey) {
+            if ($getCategory == $arrayKey['category']) {
+                $cards .= "
+                <div class='card m-2' style='width: 36rem' style='height: 6rem'>
                 <div class='card-body'>
-                <h6>$image[title]</h6>
-                    <img src='$image[image]' class='card-img-top img-fluid img-thumbnail'>
-                    <p class='card-text mt-2'>$image[description]</p>
-                    </div>
-                    <p class='card-text  ml-5 mb-2 justify-center'>
-                    <small class='text-muted'>$image[price] kronor</small>
-                    </p>
-            </div>
-            ";
+                <h6 class='card-text price-view ml-5 mb-2 p-3 mb-2 bg-secondary text-white'>$arrayKey[title]</h6>
+                <img src='$arrayKey[image]' class='card-img-top img-fluid img-thumbnail'>
+                <p class='card-text mt-2'>$arrayKey[description]</p>
+                </div>
+                <p class='card-text price-view ml-5 mb-2 p-3 mb-2 bg-secondary text-white text-center'>
+                $ $arrayKey[price]
+                </p>
+                </div>
+                ";
+            }
         }
-        echo $cards;
+        echo "<h1 class='text-center mb-4'>" . ucfirst($getCategory) . "</h1>" . $cards;
     }
 }
