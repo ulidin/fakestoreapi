@@ -19,8 +19,9 @@
         <!-- <h1 class="text-center"></h1> -->
     </div>
     <div class="row d-flex">
+        <!-- http://webacademy.se/fakestore/ -->
         <!-- 'https://fakestoreapi.com/products/'-->
-        <?php App::getDataImages('http://webacademy.se/fakestore/'); ?>
+        <?php App::getDataImages('https://fakestoreapi.com/products/'); ?>
     </div>
 </body>
 

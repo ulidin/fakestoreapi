@@ -4,8 +4,8 @@ class App
 {
 
 
-    // public static $endpoint = 'https://fakestoreapi.com/products';
-    public static $endpoint = 'http://webacademy.se/fakestore/';
+    public static $endpoint = 'https://fakestoreapi.com/products';
+    // public static $endpoint = 'http://webacademy.se/fakestore/';
 
 
     /*****
@@ -44,8 +44,6 @@ class App
         self::renderData($imgArray);
     }
 
-
-
     /*****
      * En klassmetod som renderar data
      */
@@ -53,6 +51,7 @@ class App
     {
         $getCategory = strtolower(isset($_GET['category'])) ? $_GET['category'] : null;
         iconv(mb_detect_encoding($getCategory, mb_detect_order(), true), "UTF-8", $getCategory);
+
         $cards = "";
         foreach ($array as $arrayKey) {
             if ($getCategory == $arrayKey['category']) {

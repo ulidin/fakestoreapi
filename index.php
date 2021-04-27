@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    <h1 class="text-center">FakeStore</h1>
-    <div class="container" action="cloths.php" method="POST">
+    <div class="container text-center">
+        <h1 class="text-center">FakeStore</h1>
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Women's clothing</h5>
                         <img src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
-                        <a href="clothes.php?category=women clothing" class="btn btn-primary">Fashion for women</a>
+                        <a href="clothes.php?category=women's clothing" class="btn btn-primary">Fashion for women</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Men's clothing</h5>
                         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
-                        <a href="clothes.php?category=men clothing" class="btn btn-primary">Fashion for men</a>
+                        <a href="clothes.php?category=men's clothing" class="btn btn-primary">Fashion for men</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,6 @@
                         <h5 class="card-title">Jewelery</h5>
                         <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
                         <a href="clothes.php?category=jewelery" class="btn btn-primary">Fashion of jewelery</a>
-
                     </div>
                 </div>
             </div>
