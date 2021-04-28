@@ -21,7 +21,13 @@
     <div class="row d-flex">
         <!-- http://webacademy.se/fakestore/ -->
         <!-- 'https://fakestoreapi.com/products/'-->
+        <form action="">
+            <button type="button" onclick="location.href='index.php'">Back to Home</button>
+        </form>
         <?php App::getDataImages('https://fakestoreapi.com/products/'); ?>
+        <form action="">
+            <button type="button" onclick="location.href='index.php'">Back to Home</button>
+        </form>
     </div>
 </body>
 
